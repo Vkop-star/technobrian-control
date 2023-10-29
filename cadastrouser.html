@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tecnobrian Cadastro</title>
+    <link rel="stylesheet" href="cadastrouser.css">
+    <link rel="icon" type="image/jpg" href="tecnobrian.jpg">
+
+</head>
+<body>
+    
+    <div class="main-cadastro">
+        <div class="left-cadastro">
+            <h1>Acho que não Possui Cadastro Conosco... <br>Então Cadastre-se e Venha Fazer Parte da Familia Tecnobrian!!</h1>
+            <img src="mobile-login-animate.svg" class="left-cadastro-image" alt="imagem inicial">
+        </div>
+        <div class="right-cadastro">
+            <div class="card-cadastro">
+                <h1>Cadastre-se</h1>
+                <div class="textfield">
+                    <label for="usuario">Usuário</label>
+                    <input type="text" name="login" id="login" placeholder="Usuário">
+                </div>
+                <div class="textfield">
+                    <label for="senha">Senha</label>
+                    <input type="password" name="senha" id="senha" placeholder="Senha">
+                </div>
+                <div class="textfield">
+                    <label for="nome">Nome</label>
+                    <input type="text" name="nome" id="nome" placeholder="Nome Completo">
+                </div>
+                <button class="btn-cadastro" onclick="cadastrar();">Cadastrar</button>
+                <h5 class="cadast">Caso Ja Tenha Cadastro no Nosso Site: <a href="login.html">Login!</a></h5>
+            </div>
+        </div>
+    </div>
+    <script src="cadastrouser.js"></script>
+
+</body>
+</html>

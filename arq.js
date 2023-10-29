@@ -1,0 +1,57 @@
+const miniTwitter = {
+    usuarios: [
+        {
+            username: prompt('insira seu usuario'),
+            senha: prompt('insira sua senha')
+        }
+    ],
+    posts: [
+        {
+            id: 1,
+            owner: 'admin',
+            content: 'Meu primeiro Twitte'
+        }
+    ]
+};
+
+//Create
+function criarPost(dados) {
+    miniTwitter.posts.push ({
+        id: miniTwitter.posts.length + 1,
+        owner: dados.owner,
+        content: dados.content
+    });
+}
+criarPost({
+    owner: 'teste', content: 'segundo twitte'
+});
+console.log(miniTwitter.posts)
+//Read
+function pegaPost() {
+    return miniTwitter.posts;
+}
+console.log(pegaPost())
+
+//Update
+function atualizaContentDoPost(id, novoConteudo) {
+    const postQueVaiSerAtualizado = pegaPost().find((post) => {
+        return post.id == id;
+    })
+   console.log(postQueVaiSerAtualizado)
+   postQueVaiSerAtualizado.content = novoConteudo
+}   
+atualizaContentDoPost(2, 'Novo conteudo do twitte')
+console.log(pegaPost())
+
+//Delete 
+function deletaPost(id) {
+    const listaDePostAtualizada = pegaPost().filter((postatual) => {
+        return postatual.id !== id;
+    })
+    miniTwitter.posts = listaDePostAtualizada;
+    console.log(listaDePostAtualizada)
+}
+deletaPost(1);
+deletaPost(2);
+
+console.log(pegaPost())
